@@ -1,39 +1,35 @@
-# 1-Kullanıcının girdiği boy ve ağırlık değerlerine göre vücut kitle indeksini (VKİ = ağırlık/(boy*boy)) hesaplayınız.
-boy = float(input("lütfen boyunuzu giriniz"))
-agirlik = float(input("lütfen ağırlık giriniz"))
+#1-Kullanıcının girdiği boy ve ağırlık değerlerine göre vücut kitle indeksini (VKİ = ağırlık/(boy*boy)) hesaplayınız.
+h = float(input("Enter your height in meters: \n"))
+w = float(input("Enter your weight in kg: \n "))
+bmi = float(w / (h*h) )
+print("Body Mass Index:", bmi)
 
-vki = float(agirlik / (boy * boy))
-print("vücut kitle indeksiniz: ",vki)
-
-# 2-Maaşı ve zam oranı girilen işçinin zamlı maaşını hesaplayarak ekranda gösteriniz.
-maas = float(input("maaşınızı girin"))
-zamOrani = float(input("zam oranınızı girin"))
-
-zamliOran = float(maas * zamOrani / 100 + maas)
-print("zamlı maaşınız: ",zamliOran)
+# #2-Maaşı ve zam oranı girilen işçinin zamlı maaşını hesaplayarak ekranda gösteriniz.
+salary = float(input("Enter your salary: \n"))
+raiseRate = float(input("Enter the raise rate: \n"))
+increasedSalary = float(salary * raiseRate / 100 + salary)
+print(increasedSalary)
 
 # 3-Kullanıcının girdiği üç sayı arasında en büyük olanı bulan ve sonucu yazdıran bir program yazınız.
-birinciSayi = int(input("birinci sayiyi girin"))
-ikinciSayi = int(input("ikinci sayiyi girin"))
-ucuncuSayi = int(input("ucuncu sayiyi girin"))
-
-maximum = max(birinciSayi, ikinciSayi, ucuncuSayi)
-print("en büyük değer", maximum)
+firstNum = int(input("Please enter the first number: \n"))
+secondNum = int(input("Please enter the second number: \n"))
+thirdNum = int(input("Please enter the third number: \n"))
+Maxnum=max(firstNum, secondNum, thirdNum)
+print("Max number:", Maxnum)
 
 # 4-Dairenin alanını ve çevresini hesaplayan python kodunu yazınız.(Dairenin yarıçapını kullanıcıdan alınız)
-daireYaricapi = float(input("yarıçapı giriniz"))
-pi = 3.14
-daireAlan = pi * daireYaricapi * daireYaricapi
-daireCevre = 2 * (pi * daireYaricapi)
+import math
+radius = float(input("Input the radius of the circle : \n "))
+area = math.pi * radius ** 2
+perimeter = 2 * math.pi * radius
+print("Area of the circle:", area)
+print("Perimeter of the circle:", perimeter)
 
-print("dairenin alanı: ",daireAlan , "dairenin çevresi: ", daireCevre)
 
-# 5-Kullanıcıdan alınan bir sayının palindrom olup olmadığını bulan bir program yazınız.
-metin = input('Metni Girin : ')
-ters = metin[::-1]
-
-print('Girilen metnin tersi = %s' % (ters))
-if ters == metin:
-    print('Girilen metin palindrom')
+#5-Kullanıcıdan alınan bir sayının palindrom olup olmadığını bulan bir program yazınız.
+number=input("Please Enter Number:  \n") 
+reverseNum = number[::-1]
+if number == reverseNum:
+    print("The number is a palindrome!")
 else:
-    print('Girilen metin palindrom değil.')
+    print("The number isn't a palindrome!")
